@@ -79,7 +79,7 @@ describe('Web Elements 2', () => {
       // child windows
       // https://www.qaclickacademy.com/
 
-      it.only('Child windows', () => {
+      it('Child windows', () => {
         cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
 
         cy.get('#opentab').then((el) =>{
@@ -98,10 +98,14 @@ describe('Web Elements 2', () => {
 
       //iframe
 
-    //   it.only('iframe', () => {
-    //     cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
-        
-    //   })
+      // datepicker
+
+      it.only('iframe', () => {
+        cy.visit('https://wewe:wewe@kdlolympsite.ddirection.kz/house-call');
+        cy.get('div[class="buttons"] button:nth-child(1)').click();
+        cy.scrollTo(0, 500);
+        cy.get('#date_input').click();
+      })
 
 
 });

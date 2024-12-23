@@ -7,7 +7,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     specPattern: 'cypress/integration/examples/*.js',
-    viewportHeight: 1080,
+    viewportHeight: 1440,
     viewportWidth: 1440,
   }
 });
