@@ -1,11 +1,22 @@
 describe("End to end ecommerce test", () => {
-  it("Submit Order", () => {
-    const productName = "Nokia Edge";
+  before(function() {
+    // runs once before all tests in this block
+    cy.fixture("example").then(function(data) {
+      this.data = data;
+    });
+  });
+
+  it("Submit Order", function() {
+    // local config timeout
+    Cypress.config('defaultCommandTimeout', 7000);
+
+
+    const productName = this.data.productName;
 
     cy.visit("https://rahulshettyacademy.com/loginpagePractise/#");
 
-    cy.get("#username").type("rahulshettyacademy");
-    cy.get("#password").type("learning");
+    cy.get("#username").type(this.data.username);
+    cy.get("#password").type(this.data.password);
 
     cy.contains("Sign In").click();
 
@@ -40,14 +51,13 @@ describe("End to end ecommerce test", () => {
         expect(sum).to.be.lessThan(200000);
       });
 
-      cy.contains('button', 'Checkout').click();
+    cy.contains("button", "Checkout").click();
 
-      cy.get('#country').type("India");
-      cy.wait(6000)
-      cy.get('.suggestions ul li a').click();
+    cy.get("#country").type("India");    
+    cy.get(".suggestions ul li a").click();
 
-      cy.get('.ng-untouched > .btn').click();
+    cy.get(".ng-untouched > .btn").click();
 
-      cy.get('.alert').should('contain', 'Success');
+    cy.get(".alert").should("contain", "Success");
   });
 });
