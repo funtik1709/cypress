@@ -17,7 +17,7 @@ describe("End to end ecommerce test", () => {
 
     const productName = this.data.productName;    
 
-    this.homepage.goTo("https://rahulshettyacademy.com/loginpagePractise/#");
+    this.homepage.goTo(Cypress.env('url')+"/loginpagePractise/#");
     
     const productPage = this.homepage.login(this.data.username, this.data.password);
      
@@ -42,3 +42,12 @@ describe("End to end ecommerce test", () => {
     
   });
 });
+
+// run command
+// npx cypress run --spec cypress\integration\examples\Tutorial_6_framework.js --env url="https://rahulshettyacademy.com"
+
+// headed mode
+// npx cypress run --spec cypress\integration\examples\Tutorial_6_framework.js --headed --env url="https://rahulshettyacademy.com"
+
+// run with specific browser
+// npx cypress run --spec cypress\integration\examples\Tutorial_6_framework.js --headed --browser chrome --env url="https://rahulshettyacademy.com"
