@@ -7,11 +7,21 @@ Given("I am on Ecommerce Page", () => {
   homePage.goTo(Cypress.env("url") + "/loginpagePractise/#");
 });
 
-When("I login to the application", function() {
-  this.productPage = homePage.login(this.data.username, this.data.password);
+// When("I login to the application", function() {
+//   this.productPage = homePage.login(this.data.username, this.data.password);
 
-  this.productPage.pageValidation();
-  this.productPage.verifyCardLimit();
+//   this.productPage.pageValidation();
+//   this.productPage.verifyCardLimit();
+// });
+
+//login with data table
+
+When("I login to the application", function(dataTable) {
+
+    this.productPage = homePage.login(dataTable.rawTable[1][0], dataTable.rawTable[1][1]);
+    this.productPage.pageValidation();
+    this.productPage.verifyCardLimit();
+
 });
 
 When("I add items to Cart and checkout", function () {
@@ -31,3 +41,12 @@ Then("Select the country and verify Thankyou", function() {
   confirmationPage.submitFormDetails();
   confirmationPage.getAlertMessage();
 });
+
+// run feature file from terminal
+// npx cypress run --spec cypress\integration\examples\BDD\ecommerce.feature
+
+// run specific scenario from feature file 
+// npx cypress run --env tags = "@RegressionTest"
+
+// run specific scenario from feature file headed mode
+// npx cypress run --env tags = "@RegressionTest" --headed
