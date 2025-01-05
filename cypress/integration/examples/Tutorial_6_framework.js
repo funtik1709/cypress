@@ -19,8 +19,7 @@ describe("End to end ecommerce test", () => {
 
     this.homepage.goTo(Cypress.env('url')+"/loginpagePractise/#");
     
-    const productPage = this.homepage.login(this.data.username, this.data.password);
-     
+    const productPage = this.homepage.login(this.data.username, this.data.password);     
 
     productPage.pageValidation();
     productPage.verifyCardLimit();
