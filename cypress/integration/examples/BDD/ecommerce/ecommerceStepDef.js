@@ -18,7 +18,7 @@ Given("I am on Ecommerce Page", () => {
 
 When("I login to the application", function(dataTable) {
 
-    this.productPage = homePage.login(dataTable.rawTable[1][0], dataTable.rawTable[1][1]);
+    this.productPage = homePage.login('rahulshettyacademy', 'learning');
     this.productPage.pageValidation();
     this.productPage.verifyCardLimit();
 

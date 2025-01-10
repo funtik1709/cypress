@@ -5,7 +5,8 @@
     "cypress": "^13.17.0"
   },
   "devDependencies": {
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "multiple-cucumber-html-reporter": "^3.9.0"
   },
   "scripts": {
     "test-run": "npx cypress run",
@@ -15,5 +16,11 @@
     "test-chrome": "npx cypress run --browser chrome",
     "test-olymp": "npx cypress run --spec  \"cypress/integration/olymp/*\"",
     "smoke-test": "npx cypress run --spec  \"cypress/integration/olymp/SmokeTest.js\""
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumberReports/results.json"
+    }
   }
 }

@@ -46,11 +46,11 @@ async function setupNodeEvents(on, config) {
 } 
 
 module.exports = defineConfig({
-  reporter: 'cypress-mochawesome-reporter',
+  reporter: 'cypress-mochawesome-reporter',  
   // global timeout settings
   defaultCommandTimeout: 6000,
   env: {
-    url: "https://rahulshettyacademy.com"
+    url: "https://rahulshettyacademy.com",    
   },  
   retries: {
     runMode: 1,    
@@ -62,7 +62,7 @@ module.exports = defineConfig({
     //   require('cypress-mochawesome-reporter/plugin')(on);
     // },
     setupNodeEvents,
-    //specPattern: 'cypress/integration/*/*.js',
+    //specPattern: 'cypress/integration/olymp/*.js',
     specPattern: 'cypress/integration/examples/BDD/*.feature',
     viewportHeight: 1440,
     viewportWidth: 1440,

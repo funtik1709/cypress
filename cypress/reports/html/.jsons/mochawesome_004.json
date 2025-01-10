@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-09T12:34:22.127Z",
+    "end": "2025-01-09T12:34:56.497Z",
+    "duration": 34370,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a411a5db-7a84-4858-ae46-49e77664e1f9",
+      "title": "",
+      "fullFile": "cypress\\integration\\olymp\\Homepage.js",
+      "file": "cypress\\integration\\olymp\\Homepage.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "45cce19f-2e65-4154-9e92-90e61370b409",
+          "title": "Homepage",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Open Home Page and Confirm City",
+              "fullTitle": "Homepage Open Home Page and Confirm City",
+              "timedOut": null,
+              "duration": 12535,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "this.selectCity.confirmCity();",
+              "err": {},
+              "uuid": "db36add6-9149-4d62-9525-6426beb07c33",
+              "parentUUID": "45cce19f-2e65-4154-9e92-90e61370b409",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Open Home Page and Search Main City",
+              "fullTitle": "Homepage Open Home Page and Search Main City",
+              "timedOut": null,
+              "duration": 2951,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "this.selectCity.searchCity(this.data.main_city);",
+              "err": {},
+              "uuid": "31256c3a-f23c-4afe-b77a-17152b382b3b",
+              "parentUUID": "45cce19f-2e65-4154-9e92-90e61370b409",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Open Home Page and Search Region City",
+              "fullTitle": "Homepage Open Home Page and Search Region City",
+              "timedOut": null,
+              "duration": 4561,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "this.selectCity.searchRegion(this.data.region_city);",
+              "err": {},
+              "uuid": "0e23510d-4d7e-4794-b12b-5e3d29b6a9bb",
+              "parentUUID": "45cce19f-2e65-4154-9e92-90e61370b409",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Open Home Page and Select Region City",
+              "fullTitle": "Homepage Open Home Page and Select Region City",
+              "timedOut": null,
+              "duration": 2001,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "this.selectCity.selectCity();",
+              "err": {},
+              "uuid": "ace6f0f3-1b46-494f-8ad6-9dd6b76875db",
+              "parentUUID": "45cce19f-2e65-4154-9e92-90e61370b409",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Swich Language",
+              "fullTitle": "Homepage Swich Language",
+              "timedOut": null,
+              "duration": 2923,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "this.selectCity.confirmCity();\ncy.get(\".select .select__preview\").should(\"contain\", \"ru\");\ncy.get(\".select\").eq(0).click();\ncy.get(\".select__list__elem\").contains(\"kz\").click();\ncy.get('h1[class=\"title\"]').should(\"contain\", this.data.title.kz);\ncy.get(\".select\").eq(0).click();\ncy.get(\".select__list__elem\").contains(\"en\").click();\ncy.get('h1[class=\"title\"]').should(\"contain\", this.data.title.en);\ncy.get(\".select\").eq(0).click();\ncy.get(\".select__list__elem\").contains(\"ru\").click();",
+              "err": {},
+              "uuid": "398c3c4b-0bd0-4578-b9b7-8ecd8890a8e4",
+              "parentUUID": "45cce19f-2e65-4154-9e92-90e61370b409",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Empty Cart Check",
+              "fullTitle": "Homepage Empty Cart Check",
+              "timedOut": null,
+              "duration": 3098,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "this.selectCity.confirmCity();\ncy.get('.shop__card').click();\ncy.get('.shop__card__panel__main__empty').should('contain', 'Список услуг пуст');\n// open the cart page\ncy.get('.shop__card__panel__go').should('contain', 'Перейти в корзину').click();\ncy.get('.texts h1').should('contain', 'Ваша корзина пуста');\ncy.get('.texts .more').first().should('contain', 'Вы ещё не добавили ни одной услуги.');\ncy.get('.texts .more').eq(1).should('contain', 'Раздел «Анализы» поможет вам найти необходимое исследование.');\ncy.get('button').contains('Выбрать услуги').click();\ncy.get('.title').should('contain', 'Анализы');\ncy.get('a[href=\"/\"]').filter(':visible').click();",
+              "err": {},
+              "uuid": "a5527e25-d5bc-4630-8213-ca06b83b7585",
+              "parentUUID": "45cce19f-2e65-4154-9e92-90e61370b409",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "db36add6-9149-4d62-9525-6426beb07c33",
+            "31256c3a-f23c-4afe-b77a-17152b382b3b",
+            "0e23510d-4d7e-4794-b12b-5e3d29b6a9bb",
+            "ace6f0f3-1b46-494f-8ad6-9dd6b76875db",
+            "398c3c4b-0bd0-4578-b9b7-8ecd8890a8e4",
+            "a5527e25-d5bc-4630-8213-ca06b83b7585"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28069,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
