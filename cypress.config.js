@@ -50,7 +50,7 @@ module.exports = defineConfig({
   // global timeout settings
   defaultCommandTimeout: 6000,
   env: {
-    url: "https://rahulshettyacademy.com",    
+    url: "https://new.kdlolymp.kz/",    
   },  
   retries: {
     runMode: 1,    

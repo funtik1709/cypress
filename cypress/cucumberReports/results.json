@@ -4,74 +4,48 @@
     "elements": [
       {
         "description": "",
-        "id": "end-to-end-ecommerce-validation;ecommerce-products-delivery",
+        "id": "homepage-test;open-homepage-and-confirm-city",
         "keyword": "Scenario",
         "line": 3,
-        "name": "Ecommerce products delivery",
+        "name": "Open Homepage And Confirm City",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
-            "name": "I am on Ecommerce Page",
+            "name": "I am on Home Page",
             "match": {
-              "location": "cypress/integration/examples/BDD/ecommerce/ecommerceStepDef.js:6"
+              "location": "cypress/integration/examples/BDD/olymp/OlympStepDef.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 1042000000
+              "duration": 2684000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 5,
-            "name": "I login to the application",
+            "name": "I confirm current city",
             "match": {
-              "location": "cypress/integration/examples/BDD/ecommerce/ecommerceStepDef.js:19"
+              "location": "cypress/integration/examples/BDD/olymp/OlympStepDef.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 26138000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 6,
-            "name": "I add items to Cart and checkout",
-            "match": {
-              "location": "cypress/integration/examples/BDD/ecommerce/ecommerceStepDef.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 381000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 7,
-            "name": "I validate the total price limit",
-            "match": {
-              "location": "cypress/integration/examples/BDD/ecommerce/ecommerceStepDef.js:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 29000000
+              "duration": 181000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 8,
-            "name": "Select the country and verify Thankyou",
+            "line": 6,
+            "name": "Home Page loaded and Title is asserted",
             "match": {
-              "location": "cypress/integration/examples/BDD/ecommerce/ecommerceStepDef.js:39"
+              "location": "cypress/integration/examples/BDD/olymp/OlympStepDef.js:16"
             },
             "result": {
               "status": "passed",
-              "duration": 5437000000
+              "duration": 34000000
             }
           }
         ],
@@ -84,11 +58,11 @@
         "type": "scenario"
       }
     ],
-    "id": "end-to-end-ecommerce-validation",
+    "id": "homepage-test",
     "line": 1,
     "keyword": "Feature",
-    "name": "End to end Ecommerce validation",
+    "name": "Homepage Test",
     "tags": [],
-    "uri": "cypress\\integration\\examples\\BDD\\ecommerce.feature"
+    "uri": "cypress\\integration\\examples\\BDD\\olymp.feature"
   }
 ]
