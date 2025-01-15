@@ -63,7 +63,8 @@ module.exports = defineConfig({
     // },
     setupNodeEvents,
     //specPattern: 'cypress/integration/olymp/*.js',
-    specPattern: 'cypress/integration/examples/BDD/*.feature',
+    //specPattern: 'cypress/integration/examples/BDD/*.feature',
+    specPattern: 'cypress/integration/examples/*.js',
     viewportHeight: 1440,
     viewportWidth: 1440,
   }
