@@ -1,5 +1,5 @@
 Feature: Homepage Test
-@SmokeTest
+@ConfirmCity
 Scenario: Open Homepage And Confirm City
 Given I am on Home Page
 When I confirm current city

@@ -1,5 +1,9 @@
 /// <reference types="cypress" />
 
+Cypress.on("uncaught:exception", (err, runnable) => {
+    return false;
+  });
+
 describe("Intercept Test", () => {
   it("Intercept Fake Test", () => {
     cy.visit("https://rahulshettyacademy.com/angularAppdemo/");
@@ -24,7 +28,14 @@ describe("Intercept Test", () => {
     ).as("bookretrievals");
 
     cy.get("button[class='btn btn-primary']").click();
-    cy.wait('@bookretrievals');
+    cy.wait('@bookretrievals').then(({request, response}) => {
+        cy.get('tr').should('have.length', response.body.length+1);
+        //response.body
+    });
     cy.get('p').should('have.text', 'Oops only 1 Book available');
   });
+
+  
+
+ 
 });

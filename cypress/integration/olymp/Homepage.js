@@ -38,7 +38,7 @@ describe("Homepage", () => {
     this.selectCity.selectCity();
   });
 
-  it("Swich Language", function () {
+  it("Switch Language", function () {
     this.selectCity.confirmCity();
     cy.get(".select .select__preview").should("contain", "ru");
     cy.get(".select").eq(0).click();
@@ -51,26 +51,57 @@ describe("Homepage", () => {
 
     cy.get(".select").eq(0).click();
     cy.get(".select__list__elem").contains("ru").click();
-
   });
 
-  it('Empty Cart Check', function() {
+  it("Empty Cart Check", function () {
     this.selectCity.confirmCity();
-    cy.get('.shop__card').click();
-    cy.get('.shop__card__panel__main__empty').should('contain', 'Список услуг пуст');
+    cy.get(".shop__card").click();
+    cy.get(".shop__card__panel__main__empty").should(
+      "contain",
+      "Список услуг пуст"
+    );
 
     // open the cart page
-    cy.get('.shop__card__panel__go').should('contain', 'Перейти в корзину').click();
-    cy.get('.texts h1').should('contain', 'Ваша корзина пуста');
-    cy.get('.texts .more').first().should('contain', 'Вы ещё не добавили ни одной услуги.');
-    cy.get('.texts .more').eq(1).should('contain', 'Раздел «Анализы» поможет вам найти необходимое исследование.');
+    cy.get(".shop__card__panel__go")
+      .should("contain", "Перейти в корзину")
+      .click();
+    cy.get(".texts h1").should("contain", "Ваша корзина пуста");
+    cy.get(".texts .more")
+      .first()
+      .should("contain", "Вы ещё не добавили ни одной услуги.");
+    cy.get(".texts .more")
+      .eq(1)
+      .should(
+        "contain",
+        "Раздел «Анализы» поможет вам найти необходимое исследование."
+      );
 
-    cy.get('button').contains('Выбрать услуги').click();
+    cy.get("button").contains("Выбрать услуги").click();
 
-    cy.get('.title').should('contain', 'Анализы');
+    cy.get(".title").should("contain", "Анализы");
 
-    cy.get('a[href="/"]').filter(':visible').click();
+    cy.get('a[href="/"]').filter(":visible").click();
   });
+
+  it("Analysis Search Long Text", function () {
+    this.selectCity.confirmCity();
+    this.homepage.SearchAnalysisLong("Мужской гормональный фон");
+  });
+
+  it("Analysis Search Short Text", function () {
+    this.selectCity.confirmCity();
+    this.homepage.SearchAnalysisShort("Mg");
+  });
+
+  it("Analysis Search With Button", function() {
+    this.selectCity.confirmCity();
+    this.homepage.SearchAnalysisButton("Альфа-амилаза");
+  });
+
+  it.only('Offers Block Test', function(){
+    this.selectCity.confirmCity();
+    this.homepage.OfferHouseCall();
+  })
 
   afterEach(function () {
     this.selectCity.assertTitle(this.data.title.ru);

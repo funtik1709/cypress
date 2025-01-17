@@ -21,8 +21,8 @@ class OlympSelectCity {
 
   selectCity() {
     cy.get(".dd_button").contains("Нет").click();
-    cy.get(".regions .area-9-name").click();
-    cy.get(".area-9-cities .city-42").click();
+    cy.get(".regions .area-11-name").click();
+    cy.get(".area-11-cities .city-46").click();
     cy.get(".current-city span").should("contain", "Кызылорда");
   }
 

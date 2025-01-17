@@ -1,5 +1,5 @@
 {
-    "url": "https://new.kdlolymp.kz/",
+    "url": "https://wewe:wewe@kdlolympsite.ddirection.kz/",
     "main_city": "Шымкент",
     "region_city": "Актау",
     "region": "Кызылординская область",
@@ -40,6 +40,11 @@
             "franchise": "Франшиза",
             "franchise_kz": "Франшиза",
             "franchise_en": "Franchise"
+        }
+    ],
+    "page_titles": [
+        {
+
         }
     ]
 }
