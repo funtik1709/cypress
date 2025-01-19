@@ -28,4 +28,14 @@ Cypress.Commands.add('submitFormDetails', () => {
     cy.get("#country").type("India");    
     cy.get(".suggestions ul li a").click();
     cy.get(".ng-untouched > .btn").click();
-})
+});
+
+Cypress.Commands.add('LoginAPI', () => {
+    cy.request("POST", "https://rahulshettyacademy.com/api/ecom/auth/login", 
+    {userEmail: "yergazy.nur@yandex.kz", userPassword: "Aikosh2017"}
+    ).then(function(response){
+
+        expect(response.status).to.eq(200);
+        Cypress.env('token', response.body.token);
+    });
+});
