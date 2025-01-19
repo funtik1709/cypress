@@ -6,7 +6,8 @@
   },
   "devDependencies": {
     "cypress-mochawesome-reporter": "^3.8.2",
-    "multiple-cucumber-html-reporter": "^3.9.0"
+    "multiple-cucumber-html-reporter": "^3.9.0",
+    "neat-csv": "5.1.0"
   },
   "scripts": {
     "test-run": "npx cypress run",
