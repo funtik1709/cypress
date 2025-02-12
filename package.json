@@ -2,6 +2,7 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
     "@cypress/browserify-preprocessor": "latest",
+    "convert-excel-to-json": "^1.7.0",
     "cypress": "^13.17.0"
   },
   "devDependencies": {
@@ -25,3 +26,4 @@
     }
   }
 }
+

@@ -1,13 +1,38 @@
 {
     "url": "https://wewe:wewe@kdlolympsite.ddirection.kz/",
     "main_city": "Шымкент",
-    "region_city": "Актау",
+    "region_city": "Семей",
     "region": "Кызылординская область",
+    "area":{
+        "region": "Абайская область",
+        "city": "Семей",
+        "search_city": "Тараз"
+    },
     "ru_title": "Клинико-диагностические лаборатории ОЛИМП",
     "title": {
         "ru": "Клинико-диагностические лаборатории ОЛИМП",
         "kz": "ОЛИМП клиникалық-диагностикалық зертханалары",
         "en": "OLYMP Clinical Diagnostic Laboratories" 
+    },
+    "results":{        
+        "login": "58107979",
+        "password": "876348",
+        "title": "Результаты анализа",
+        "ex_login": "1011157123",
+        "ex_password": "100580",
+        "ex_title": "Истёк срок получения результатов"
+    },
+    "patient":{
+        "phone": "+7 776 9961197",
+        "password": "Abcd123@",
+        "email": "malikov.mp4@mail.ru",
+        "name": "Ярослав",
+        "lastname": "Маликов",
+        "discount": "2000075003553"
+    },
+    "userAgreement": {
+        "title": "Пользовательское соглашение",
+        "button": "Принять условия"
     },
     "page_links": ["Акции", "Анализы", "Где сдать?", "Выезд на дом", "О нас", "Франшиза"],
     "links": [

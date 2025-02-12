@@ -69,7 +69,9 @@ describe("Smoke Test - Pages", () => {
   it("Open Login Page", function () {
     cy.get('a[href="/login"]').filter(":visible").click();
     cy.get("h1").should("contain", "Войти в личный кабинет");
-  });
+  }); 
+
+
 
   it("ISO Check", function () {
     this.homepage.isoCheck();

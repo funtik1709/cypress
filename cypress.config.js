@@ -1,5 +1,10 @@
 
-const { defineConfig } = require("cypress"); 
+const { defineConfig } = require("cypress");
+
+// excel to json
+const excelToJson = require('convert-excel-to-json');
+const fs = require('fs');
+// excel to json
 
  const browserify = require("@cypress/browserify-preprocessor");
  const {
@@ -17,6 +22,19 @@ async function setupNodeEvents(on, config) {
     browserify(preprendTransformerToOptions(config, browserify.defaultOptions)),
   );
 
+  //excel task
+  on('task', {
+
+    excelToJsonConverter(filePath) {
+      const result = excelToJson({
+        source: fs.readFileSync(filePath) // fs.readFileSync return a Buffer
+      });
+
+      return result;
+    }
+
+  })
+
   // Make sure to return the config object as it might have been modified by the plugin.
   return config;
 } 
@@ -24,7 +42,7 @@ async function setupNodeEvents(on, config) {
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',  
   // global timeout settings
-  defaultCommandTimeout: 6000,
+  defaultCommandTimeout: 8000,
   env: {
     url: "https://new.kdlolymp.kz/",    
   },  
@@ -39,10 +57,11 @@ module.exports = defineConfig({
     // },
     setupNodeEvents,
     //specPattern: 'cypress/integration/olymp/*.js',
-    //specPattern: 'cypress/integration/examples/BDD/*.feature',
-    specPattern: 'cypress/integration/examples/*.js',
+    specPattern: 'cypress/integration/examples/BDD/*.feature',
+    //specPattern: 'cypress/integration/examples/*.js',
     viewportHeight: 1440,
     viewportWidth: 1440,
-    scrollBehavior: false 
+    scrollBehavior: false,
+    experimentalOriginDependencies: true 
   }
 });

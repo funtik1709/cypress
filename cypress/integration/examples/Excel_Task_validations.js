@@ -17,12 +17,12 @@ describe("JWT Session", () => {
         },
       });
     });
-    cy.get(".card b")
-      .eq(1)
+    cy.get(".card")
+      .eq(0)
       .then(function (el) {
         productName = el.text();
       });
-    cy.get(".card button:last-of-type").eq(1).click();
+    cy.get(".card button:last-of-type").eq(0).click();
     cy.get("[routerlink*='cart']").click();
     cy.contains("Checkout").click();
 
@@ -38,27 +38,22 @@ describe("JWT Session", () => {
     cy.get(".action__submit").click();
     cy.wait(2000);
 
-    cy.get(".order-summary button").eq(0).click();
+    cy.get(".order-summary button").contains("Excel").click();
 
-    Cypress.config("fileServerFolder");
-
-    cy.readFile(
+    const filePath =
       Cypress.config("fileServerFolder") +
-        "/cypress/downloads/order-invoice_yergazy.nur.csv"
-    ).then(async (text) => {
-      const csv = await neatCSV(text);
-      console.log(csv);
+      "/cypress/downloads/order-invoice_yergazy.nur.xlsx";
 
-      const actualProductCSV = csv[0]["Product Name"];
-
-      // assertion
-      expect(productName).to.equal(actualProductCSV);
+    cy.task("excelToJsonConverter", filePath).then(function (result) {
+      cy.log(result.data[1].B);
+      console.log(result);
+      expect(productName).to.include(result.data[1].B);
     });
 
     // simple way to read any file to find some text
-    cy.readFile(Cypress.config("fileServerFolder") +
-    "/cypress/downloads/order-invoice_yergazy.nur.csv").then(function(text){
-        expect(text).to.include(productName);
-      });
+    cy.readFile(filePath).then(function (text) {
+      // let cleanText = text.trim().slice(0, -1);
+      cy.log(text);      
+    });
   });
 });

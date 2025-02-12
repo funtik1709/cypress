@@ -27,14 +27,17 @@ describe("Homepage", () => {
   });
 
   it("Open Home Page and Search Main City", function () {
+    this.selectCity.rejectCity();
     this.selectCity.searchCity(this.data.main_city);
   });
 
   it("Open Home Page and Search Region City", function () {
+    this.selectCity.rejectCity();
     this.selectCity.searchRegion(this.data.region_city);
   });
 
   it("Open Home Page and Select Region City", function () {
+    this.selectCity.rejectCity();
     this.selectCity.selectCity();
   });
 

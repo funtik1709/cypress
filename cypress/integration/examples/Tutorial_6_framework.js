@@ -40,13 +40,4 @@ describe("End to end ecommerce test", () => {
   });
 });
 
-// run command
-// npx cypress run --spec cypress\integration\examples\Tutorial_6_framework.js --env url="https://rahulshettyacademy.com"
 
-// headed mode
-// npx cypress run --spec cypress\integration\examples\Tutorial_6_framework.js --headed --env url="https://rahulshettyacademy.com"
-
-// run with specific browser
-// npx cypress run --spec cypress\integration\examples\Tutorial_6_framework.js --headed --browser chrome --env url="https://rahulshettyacademy.com"
-
-// npx cypress run --record --key cc45d20c-1536-451a-9e15-3b557b46204d --spec cypress/integration/examples/BaseTest.js
