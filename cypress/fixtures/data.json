@@ -1,0 +1,75 @@
+{
+    "url": "https://wewe:wewe@kdlolympsite.ddirection.kz/",
+    "main_city": "Шымкент",
+    "region_city": "Семей",
+    "region": "Кызылординская область",
+    "area":{
+        "region": "Абайская область",
+        "city": "Семей",
+        "search_city": "Тараз"
+    },
+    "ru_title": "Клинико-диагностические лаборатории ОЛИМП",
+    "title": {
+        "ru": "Клинико-диагностические лаборатории ОЛИМП",
+        "kz": "ОЛИМП клиникалық-диагностикалық зертханалары",
+        "en": "OLYMP Clinical Diagnostic Laboratories" 
+    },
+    "results":{        
+        "login": "58107979",
+        "password": "876348",
+        "title": "Результаты анализа",
+        "ex_login": "1011157123",
+        "ex_password": "100580",
+        "ex_title": "Истёк срок получения результатов"
+    },
+    "patient":{
+        "phone": "+7 776 9961197",
+        "password": "Abcd123@",
+        "email": "malikov.mp4@mail.ru",
+        "name": "Ярослав",
+        "lastname": "Маликов",
+        "discount": "2000075003553"
+    },
+    "userAgreement": {
+        "title": "Пользовательское соглашение",
+        "button": "Принять условия"
+    },
+    "page_links": ["Акции", "Анализы", "Где сдать?", "Выезд на дом", "О нас", "Франшиза"],
+    "links": [
+        {
+            "prom": "Акции",
+            "prom_kz": "Акциялар",
+            "prom_en": "Offers"
+        },
+        {
+            "analysis": "Анализы",
+            "analysis_kz": "Талдаулар",
+            "analysis_en": "Tests"
+        },
+        {
+            "location": "Где сдать?",
+            "location_kz": "Қайда тапсыру керек?",
+            "location_en": "Test location"
+        },
+        {
+            "call": "Выезд на дом",
+            "call_kz": "Үйге шығу",
+            "call_en": "House call"
+        },
+        {
+            "about": "О нас",
+            "about_kz": "Біз туралы",
+            "about_en": "About us"
+        },
+        {
+            "franchise": "Франшиза",
+            "franchise_kz": "Франшиза",
+            "franchise_en": "Franchise"
+        }
+    ],
+    "page_titles": [
+        {
+
+        }
+    ]
+}

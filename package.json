@@ -1,5 +1,29 @@
 {
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+    "@cypress/browserify-preprocessor": "latest",
+    "convert-excel-to-json": "^1.7.0",
     "cypress": "^13.17.0"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "multiple-cucumber-html-reporter": "^3.9.0",
+    "neat-csv": "5.1.0"
+  },
+  "scripts": {
+    "test-run": "npx cypress run",
+    "test-open": "npx cypress open",
+    "test-headed": "npx cypress run --headed",
+    "test-record": "npx cypress run --record --key cc45d20c-1536-451a-9e15-3b557b46204d --spec cypress/integration/examples/BaseTest.js",
+    "test-chrome": "npx cypress run --browser chrome",
+    "test-olymp": "npx cypress run --spec  \"cypress/integration/olymp/*\"",
+    "smoke-test": "npx cypress run --spec  \"cypress/integration/olymp/SmokeTest.js\""
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumberReports/results.json"
+    }
   }
 }
+

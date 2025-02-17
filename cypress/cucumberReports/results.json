@@ -1,0 +1,453 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "open-homepage;open-homepage-and-assert-title",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Open Homepage And Assert Title",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I am Homepage",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1760000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I open Homepage",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 296000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Response code is 200 and Main Title is correct",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@OpenHomepage",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "open-homepage;open-homepage-and-assert-logo",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Open Homepage And Assert Logo",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am Homepage to check logo",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1815000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I open Homepage to check logo",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 143000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "Homepage open and logo is correct",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogoCheck",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "open-homepage;open-homepage-and-check-nav-links",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Open Homepage And Check Nav Links",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "I am on Homepage to check navigation links",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1389000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I check navigation link attributes",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1586000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "Navigation link text is correct",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@NavigationCheck",
+            "line": 15
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "open-homepage;open-homepage-and-switch-language",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Open Homepage and Switch Language",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I am on Homepage to check language switch",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1305000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I click an option interface language changes",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 626000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "Page title displayed in selected language",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SwitchLanguage",
+            "line": 21
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "open-homepage;open-homepage-and-check-empty-cart",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Open Homepage and Check Empty Cart",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "I am on Homepage to check empty Cart",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:99"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1070000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "I click on cart icon",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 700000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "Cart is empty and button is displayed",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:106"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@EmptyCartCheck",
+            "line": 27
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "open-homepage;open-homepage-and-check-results(expired)",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "Open Homepage and Check Results(Expired)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 35,
+            "name": "I am on Homepage to check expired results",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 939000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "I click Results button",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5666000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I am on results Page",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:122"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ExpiredResultsCheck",
+            "line": 33
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "open-homepage;open-homepage-and-check-results(actual)",
+        "keyword": "Scenario",
+        "line": 41,
+        "name": "Open Homepage and Check Results(Actual)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 42,
+            "name": "I am on Homepage to check actual results",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:130"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2295000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "I click ResultsActual button",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:134"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4717000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "I am on results ActualPage",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:137"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ActualresultsCheck",
+            "line": 39
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "open-homepage;open-homepage-and-check-patient-phone-login",
+        "keyword": "Scenario",
+        "line": 48,
+        "name": "Open Homepage and Check Patient Phone Login",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 49,
+            "name": "I am on Homepage to check patient phone login",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:145"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1263000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 50,
+            "name": "I click sign in button to phone login",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:149"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1269000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 51,
+            "name": "I am on phone login page",
+            "match": {
+              "location": "cypress/integration/examples/BDD/homepage/StepDef.js:152"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PatientLoginPhone",
+            "line": 46
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "open-homepage",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Open Homepage",
+    "tags": [],
+    "uri": "cypress\\integration\\examples\\BDD\\homepage.feature"
+  }
+]
