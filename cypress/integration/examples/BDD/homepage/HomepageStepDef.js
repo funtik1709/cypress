@@ -223,6 +223,21 @@ Then("Four items left in the list", function () {
 
 // -- @SearchHistoryExtended
 
+// @CheckCarousel -- 
+
+Given("I get carousel items", function () {
+  homepage.open(this.data.url);
+  selectCity.confirmCity();
+});
+When("I click an item", function () {
+  homepage.CheckCarousel();
+});
+Then("An item image is visible and an offer page opens", function () {
+  
+});
+
+// -- @CheckCarousel
+
 /////////////////////// body
 
 // npx cypress run --spec cypress\integration\examples\BDD\homepage.feature --browser chrome

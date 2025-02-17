@@ -71,13 +71,29 @@ Scenario: Delete search history from list
     When I delete one item from list
     Then Substract one item from the list
 
-#@SearchHistoryExtended
-@focus
+@SearchHistoryExtended
+#@focus
 Scenario: Delete one item from search history
     Given Five items in the search history
     When I search first item   
     Then Four items left in the list
 
+#@CheckCarousel
+@focus
+Scenario: Check main carousel images visibility
+    Given I get carousel items
+    When I click an item
+    Then An item image is visible and an offer page opens
 
-    
+
+@CheckActualServices
+Scenario: Check actual services
+    Given I find actual services blocks
+    When I click each service item
+    Then Sevice page opens
+
+
+
+
+
 #body

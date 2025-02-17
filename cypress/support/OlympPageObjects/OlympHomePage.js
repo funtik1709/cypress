@@ -128,6 +128,43 @@ class OlympHomePage {
     cy.get(".items").should("have.prop", "childElementCount", minus);
   }
 
+
+  /* HOMEPAGE CAROUSEL IMAGE VISIBILITY TEST */
+  
+  CheckCarousel() {    
+    cy.get('.slider_title').should("contain", "Актуальные предложения");
+    cy.get('.buttons button img').should('be.visible');
+    
+    cy.get('.slider .carousel__viewport ol li img[class="pc"]').eq(0).invoke('width').should('be.greaterThan', 400);
+    cy.get('.slider .carousel__viewport ol li img[class="pc"]').eq(0).invoke('height').should('be.greaterThan', 200);
+    
+    
+
+    cy.get('.slider .carousel__viewport ol li').eq(2).click();
+
+    cy.get('h1').should('contain', '15% скидка на анализы в сельских процедурных кабинетах');    
+
+  }
+
+  /* HOMEPAGE CAROUSEL IMAGE VISIBILITY TEST */
+
+  /*  */
+  OfferHouseCall() {
+    cy.get(".offers")
+      .find(".slider_title")
+      .should("contain", "Актуальные предложения");
+    cy.get(".items")
+      .find('a[href="/house-call"]')
+      .should("contain", "Услуга «Выезд на дом»");
+    cy.get(".offer")
+      .find('img[class="pc"]')
+      .should("have.css", "width")
+      .and("eq", "405px");
+  }
+
+
+  /* CHECK RESULTS. !!! CALL THIS TEST IN SEPERATE BDD */
+
   CheckResultsExpired() {
     cy.origin("https://new.kdlolymp.kz", () => {
       cy.visit("/");
@@ -146,8 +183,8 @@ class OlympHomePage {
         cy.get(".content h3").should("contain", data.results.ex_title);
       });
     });
-  }
-
+  } 
+  
   CheckResultsActual() {
     cy.origin("https://new.kdlolymp.kz", () => {
       cy.visit("/");
@@ -168,18 +205,9 @@ class OlympHomePage {
     });
   }
 
-  OfferHouseCall() {
-    cy.get(".offers")
-      .find(".slider_title")
-      .should("contain", "Актуальные предложения");
-    cy.get(".items")
-      .find('a[href="/house-call"]')
-      .should("contain", "Услуга «Выезд на дом»");
-    cy.get(".offer")
-      .find('img[class="pc"]')
-      .should("have.css", "width")
-      .and("eq", "405px");
-  }
+  /* CHECK RESULTS */
+
+  
 }
 
 export default OlympHomePage;
