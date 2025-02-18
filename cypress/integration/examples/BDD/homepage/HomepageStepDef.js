@@ -238,6 +238,24 @@ Then("An item image is visible and an offer page opens", function () {
 
 // -- @CheckCarousel
 
+// @CheckActualServices -- 
+
+Given("I find actual services blocks", function () {
+  homepage.open(this.data.url);
+  selectCity.confirmCity();
+  
+});
+When("I click each service item", function () {
+  homepage.ActualServicesHouseCall();
+  homepage.ActualServicesTests();
+  homepage.ActualServicesProfiles();
+});
+Then("Sevice page opens", function () {
+  
+});
+
+// -- @CheckActualServices
+
 /////////////////////// body
 
 // npx cypress run --spec cypress\integration\examples\BDD\homepage.feature --browser chrome

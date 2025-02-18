@@ -78,15 +78,16 @@ Scenario: Delete one item from search history
     When I search first item   
     Then Four items left in the list
 
-#@CheckCarousel
-@focus
+@CheckCarousel
+#@focus
 Scenario: Check main carousel images visibility
     Given I get carousel items
     When I click an item
     Then An item image is visible and an offer page opens
 
 
-@CheckActualServices
+#@CheckActualServices
+@focus
 Scenario: Check actual services
     Given I find actual services blocks
     When I click each service item

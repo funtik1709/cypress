@@ -88,7 +88,7 @@ class OlympHomePage {
     cy.get("h1").should("contain", text);
   }
 
-  SearchAnalysisButton(text) {    
+  SearchAnalysisButton(text) {
     cy.wait(2000);
     cy.scrollTo("top");
     cy.get("#analyzes-desktop").type(text);
@@ -113,9 +113,9 @@ class OlympHomePage {
   }
 
   DeleteOneItemFromSearchHistory(count) {
-    const minus = count - 1; 
+    const minus = count - 1;
     cy.scrollTo("top");
-    cy.get("#analyzes-desktop").click();    
+    cy.get("#analyzes-desktop").click();
 
     cy.get("#analyzes-desktop").click();
 
@@ -128,40 +128,73 @@ class OlympHomePage {
     cy.get(".items").should("have.prop", "childElementCount", minus);
   }
 
-
   /* HOMEPAGE CAROUSEL IMAGE VISIBILITY TEST */
-  
-  CheckCarousel() {    
-    cy.get('.slider_title').should("contain", "Актуальные предложения");
-    cy.get('.buttons button img').should('be.visible');
-    
-    cy.get('.slider .carousel__viewport ol li img[class="pc"]').eq(0).invoke('width').should('be.greaterThan', 400);
-    cy.get('.slider .carousel__viewport ol li img[class="pc"]').eq(0).invoke('height').should('be.greaterThan', 200);
-    
-    
 
-    cy.get('.slider .carousel__viewport ol li').eq(2).click();
+  CheckCarousel() {
+    cy.get(".slider_title").should("contain", "Актуальные предложения");
+    cy.get(".buttons button img").should("be.visible");
 
-    cy.get('h1').should('contain', '15% скидка на анализы в сельских процедурных кабинетах');    
+    cy.get('.slider .carousel__viewport ol li img[class="pc"]')
+      .eq(0)
+      .invoke("width")
+      .should("be.greaterThan", 400);
+    cy.get('.slider .carousel__viewport ol li img[class="pc"]')
+      .eq(0)
+      .invoke("height")
+      .should("be.greaterThan", 200);
 
+    cy.get(".slider .carousel__viewport ol li").eq(2).click();
+
+    cy.get("h1").should(
+      "contain",
+      "15% скидка на анализы в сельских процедурных кабинетах"
+    );
   }
 
   /* HOMEPAGE CAROUSEL IMAGE VISIBILITY TEST */
 
-  /*  */
-  OfferHouseCall() {
+  /* ACTUAL SERVICES TEST */
+  ActualServicesHouseCall() {
+    
     cy.get(".offers")
       .find(".slider_title")
       .should("contain", "Актуальные предложения");
-    cy.get(".items")
-      .find('a[href="/house-call"]')
-      .should("contain", "Услуга «Выезд на дом»");
-    cy.get(".offer")
-      .find('img[class="pc"]')
-      .should("have.css", "width")
-      .and("eq", "405px");
+
+    //house call
+    cy.get(".items .card").eq(0).should("have.attr","style","background-image:url(/images/inhouse.webp);");
+    cy.get(".items .card").eq(0).find('h4').should("contain", "Услуга «Выезд на дом»");
+
+    // house call click
+    cy.get('.items').find('a[href="/house-call"]').click();
+    
+    cy.get('h1').should('contain', 'Выезд на дом');
+    cy.get('h2').should('contain', 'Сдавайте анализы когда и где вам удобно');
+
+    cy.wait(3000);
+    cy.get('a[href="/"]').filter(':visible').click();
+
   }
 
+  ActualServicesTests(){
+    // tests
+    cy.get(".items .card").eq(1).find("h4").should("contain", "Анализы и цены");
+    cy.get('.items a').eq(1).click();
+    cy.get('h1').should('contain', 'Анализы');
+
+    cy.wait(3000);
+    cy.get('a[href="/"]').filter(':visible').click();
+  }
+
+  ActualServicesProfiles(){
+    cy.get(".items .card").eq(2).find("h4").should("contain", "Профили");
+    cy.get('.items a').eq(2).click();
+    cy.get('h1').should('contain', 'Анализы');
+    cy.get('.analyzes .header').find('h2').should('contain', 'Профили');
+
+    cy.wait(3000);
+    cy.get('a[href="/"]').filter(':visible').click();
+  }
+  /* ACTUAL SERVICES TEST */
 
   /* CHECK RESULTS. !!! CALL THIS TEST IN SEPERATE BDD */
 
@@ -183,8 +216,8 @@ class OlympHomePage {
         cy.get(".content h3").should("contain", data.results.ex_title);
       });
     });
-  } 
-  
+  }
+
   CheckResultsActual() {
     cy.origin("https://new.kdlolymp.kz", () => {
       cy.visit("/");
@@ -206,8 +239,6 @@ class OlympHomePage {
   }
 
   /* CHECK RESULTS */
-
-  
 }
 
 export default OlympHomePage;
